@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS public.post;
+
 CREATE TABLE public.post (
     id uuid NOT NULL,
     author character varying(255),
