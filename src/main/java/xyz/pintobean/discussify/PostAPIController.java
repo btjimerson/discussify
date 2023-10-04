@@ -1,8 +1,9 @@
-package xyz.pintobean.json;
+package xyz.pintobean.discussify;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
@@ -18,7 +20,8 @@ import lombok.extern.apachecommons.CommonsLog;
 
 @RestController
 @CommonsLog
-public class PostController {
+@RequestMapping("/api/v1")
+public class PostAPIController {
 
     @Autowired
     PostRepository postRepository;
@@ -45,7 +48,7 @@ public class PostController {
     }
 
     @PostMapping("/posts/{id}/comments")
-    public @ResponseBody Post addCommentToPost(@PathVariable("id") Integer postId, 
+    public @ResponseBody Post addCommentToPost(@PathVariable("id") UUID postId, 
         @RequestBody Comment comment) {
 
             Optional<Post> optionalPost = postRepository.findById(postId);

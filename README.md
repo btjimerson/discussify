@@ -1,4 +1,4 @@
-# JSON Sample Application
+# Discussify
 
 ## Introduction
 
