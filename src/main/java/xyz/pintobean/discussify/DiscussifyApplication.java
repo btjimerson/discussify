@@ -9,5 +9,4 @@ public class DiscussifyApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DiscussifyApplication.class, args);
 	}
-
 }

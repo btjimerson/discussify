@@ -38,7 +38,7 @@
                             <tr th:each="post : ${posts}">
                                 <td><a th:href="@{/posts/{id}(id=${post.id})}"><span th:text="${post.title}"></span></a></td>
                                 <td th:text="${post.author}"></td>
-                                <td th:text="${#dates.format(post.postDate, 'dd-MM-yyyy')}"></td>
+                                <td th:text="${#dates.format(post.postDate, 'MM-dd-yyyy')}"></td>
                                 <td th:text="${!#lists.isEmpty(post.comments) ? #lists.size(post.comments) : '0'}"></td>
                             </tr>
                         </tbody>

@@ -33,7 +33,7 @@ public class PostController {
         log.debug(String.format("All posts: [%s]", posts));
         model.addAttribute("posts", posts);
         model.addAttribute("tableLabel", "All Posts");
-        return "/index";
+        return "index";
     }
 
     //Gets a post by id
@@ -50,7 +50,7 @@ public class PostController {
         model.addAttribute("post", post.get());        
         model.addAttribute("comment", new Comment());
 
-        return "/viewPost";
+        return "viewPost";
     }
 
     //Adds a comment to a post
@@ -75,14 +75,14 @@ public class PostController {
 
         model.addAttribute("post", post);
         model.addAttribute("comment", new Comment());
-        return "/viewPost";
+        return "viewPost";
     }
 
     //Gets a new post
     @GetMapping("/posts/new")
     public String newPost(Model model) {
         model.addAttribute("post", new Post());
-        return "/newPost";
+        return "newPost";
     }
 
     //Saves a new post
@@ -95,7 +95,7 @@ public class PostController {
         model.addAttribute("posts", posts);
         model.addAttribute("tableLabel", "All Posts");
         model.addAttribute("message", message);
-        return "/index";
+        return "index";
     }
 
     //Searches for a search term
