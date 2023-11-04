@@ -6,7 +6,8 @@ from locust import HttpUser, between, task
 postIds = [
     "67595c74-61f3-4bf4-8d57-43a82e39283e",
     "3040df0e-af71-43de-8d30-fed78915ceee",
-    "924c8664-566e-4d43-ba72-ad659b6b1765"
+    "924c8664-566e-4d43-ba72-ad659b6b1765",
+    "8a4770b9-e4b1-4901-92c5-ce00d7f6edaa"
 ]
 
 class WebSiteUser(HttpUser):
