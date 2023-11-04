@@ -49,7 +49,7 @@
             </div>
             <div class="row py-3">
                 <div class="col-10">
-                    <span th:text="'By ' + ${post.author} + ' on ' + ${#dates.format(post.postDate, 'MM-dd-yyyy')}"></span>
+                    <span th:text="'By ' + ${post.author} + ' on ' + ${#dates.format(post.postDate, 'MM/dd/yyyy')}"></span>
                 </div>
             </div>
             <div class="row py-3">
@@ -73,7 +73,7 @@
                     <div class="col-10" th:text="${comment.comment}"></div>
                 </div>
                 <div class="row pb-3">
-                    <div class="col-10"><em><span th:text="'By ' + ${comment.author} + ' on ' + ${#dates.format(comment.commentDate, 'dd-MM-yyyy')}"></span></em></div>
+                    <div class="col-10"><em><span th:text="'By ' + ${comment.author} + ' on ' + ${#dates.format(comment.commentDate, 'MM/dd/yyyy')}"></span></em></div>
                 </div>
             </div>
             <hr class="mb-4" />
